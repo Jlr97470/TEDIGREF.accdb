@@ -1,0 +1,18 @@
+﻿{
+  "Info": {
+    "Class": "clsDbRelation",
+    "Description": "Database relationship"
+  },
+  "Items": {
+    "Name": "EXPORTATION_REGEXPORTATION_REG_DETAIL",
+    "Attributes": 256,
+    "Table": "EXPORTATION_REG",
+    "ForeignTable": "EXPORTATION_REG_DETAIL",
+    "Fields": [
+      {
+        "Name": "EXPR_Id",
+        "ForeignName": "ERD_Code"
+      }
+    ]
+  }
+}

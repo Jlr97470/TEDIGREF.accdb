@@ -1,0 +1,13 @@
+﻿CREATE TABLE [IMPORTATION_DETAIL] (
+  [IMPD_Id] AUTOINCREMENT CONSTRAINT [CleIMP_Id] UNIQUE,
+  [IMPD_Code] LONG,
+  [IMPD_CodeEtab] VARCHAR (20),
+  [IMPD_NomEtab] VARCHAR (50),
+  [IMPD_CodeGroupe] VARCHAR (5),
+  [IMPD_CodeClient] VARCHAR (5),
+  [IMPD_NbCréances] SHORT,
+  [IMPD_Montant_m1] CURRENCY,
+  [IMPD_Montant_m2] CURRENCY,
+  [IMPD_Montant_mo] LONG,
+   CONSTRAINT [PrimaryKey] PRIMARY KEY ([IMPD_Code], [IMPD_CodeEtab])
+)

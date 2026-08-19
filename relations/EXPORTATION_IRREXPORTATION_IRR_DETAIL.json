@@ -1,0 +1,18 @@
+﻿{
+  "Info": {
+    "Class": "clsDbRelation",
+    "Description": "Database relationship"
+  },
+  "Items": {
+    "Name": "EXPORTATION_IRREXPORTATION_IRR_DETAIL",
+    "Attributes": 4352,
+    "Table": "EXPORTATION_IRR",
+    "ForeignTable": "EXPORTATION_IRR_DETAIL",
+    "Fields": [
+      {
+        "Name": "EXPI_Id",
+        "ForeignName": "EID_Code"
+      }
+    ]
+  }
+}

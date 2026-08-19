@@ -1,0 +1,12 @@
+﻿CREATE TABLE [IMPORTATIONXLS] (
+  [IMPX_Id] AUTOINCREMENT CONSTRAINT [CleIMPX_Id] UNIQUE,
+  [IMPX_Date] DATETIME,
+  [IMPX_Cli_Code] VARCHAR (5),
+  [IMPX_Fichier] VARCHAR (50),
+  [IMPX_Date_Début] DATETIME,
+  [IMPX_Date_Fin] DATETIME,
+  [IMPX_Nb_Créances] LONG,
+  [IMPX_Montant_m1] CURRENCY,
+  [IMPX_Montant_m2] CURRENCY,
+   CONSTRAINT [PrimaryKey] PRIMARY KEY ([IMPX_Cli_Code], [IMPX_Fichier])
+)

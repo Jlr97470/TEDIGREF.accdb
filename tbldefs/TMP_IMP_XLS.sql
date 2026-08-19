@@ -1,0 +1,5 @@
+﻿CREATE TABLE [TMP_IMP_XLS] (
+  [TIX_Ref Client] VARCHAR (255),
+  [TIX_N°] VARCHAR (255),
+   CONSTRAINT [PrimaryKey] PRIMARY KEY ([TIX_Ref Client], [TIX_N°])
+)

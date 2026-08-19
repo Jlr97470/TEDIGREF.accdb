@@ -1,0 +1,4 @@
+﻿CREATE TABLE [TMP_EXP_IRR] (
+  [Clé impayé] LONG CONSTRAINT [PrimaryKey] PRIMARY KEY UNIQUE NOT NULL,
+  [Motif impayé] VARCHAR (50)
+)

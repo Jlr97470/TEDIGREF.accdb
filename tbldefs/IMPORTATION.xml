@@ -1,0 +1,227 @@
+﻿<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
+  <xsd:element name="dataroot">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="IMPORTATION" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="generated" type="xsd:dateTime"></xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="IMPORTATION">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <od:index index-name="CleIMP_Id" index-key="IMP_Id " primary="no" unique="yes" clustered="no" order="asc"></od:index>
+        <od:index index-name="CleIMP_Lot_CodeGREF" index-key="IMP_Lot_CodeGREF " primary="no" unique="no" clustered="no" order="asc"></od:index>
+        <od:index index-name="CleIMP_Lot_Contrat" index-key="IMP_Lot_Contrat " primary="no" unique="no" clustered="no" order="asc"></od:index>
+        <od:index index-name="CleIMP_Lot_Date" index-key="IMP_Lot_Date " primary="no" unique="no" clustered="no" order="asc"></od:index>
+        <od:index index-name="CleIMP_Lot_Num" index-key="IMP_Lot_Num " primary="no" unique="no" clustered="no" order="asc"></od:index>
+        <od:index index-name="CleIMP_Lot_Site" index-key="IMP_Lot_Site " primary="no" unique="no" clustered="no" order="asc"></od:index>
+        <od:index index-name="PrimaryKey" index-key="IMP_Lot_Date IMP_Lot_Num IMP_Lot_Site IMP_Lot_CodeGREF IMP_Lot_Contrat " primary="yes" unique="yes" clustered="no" order="asc asc asc asc asc"></od:index>
+        <od:tableProperty name="OrderByOn" type="1" value="0"></od:tableProperty>
+        <od:tableProperty name="Orientation" type="2" value="0"></od:tableProperty>
+        <od:tableProperty name="DefaultView" type="2" value="2"></od:tableProperty>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="IMP_Id" minOccurs="1" od:jetType="autonumber" od:sqlSType="int" od:autoUnique="yes" od:nonNullable="yes" type="xsd:int">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Identifiant"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="IMP_Date" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="1710"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Date d'import"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="IMEMode" type="2" value="0"></od:fieldProperty>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="IMP_Lot_Date" minOccurs="1" od:jetType="text" od:sqlSType="nvarchar" od:nonNullable="yes">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="IMEMode" type="2" value="0"></od:fieldProperty>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"></od:fieldProperty>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Lot Date"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="8"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="IMP_Lot_Num" minOccurs="1" od:jetType="text" od:sqlSType="nvarchar" od:nonNullable="yes">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="IMEMode" type="2" value="0"></od:fieldProperty>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"></od:fieldProperty>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Lot Numero"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="2"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="IMP_Lot_Site" minOccurs="1" od:jetType="text" od:sqlSType="nvarchar" od:nonNullable="yes">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="IMEMode" type="2" value="0"></od:fieldProperty>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"></od:fieldProperty>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Lot Site"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="5"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="IMP_Lot_CodeGREF" minOccurs="1" od:jetType="text" od:sqlSType="nvarchar" od:nonNullable="yes">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="IMEMode" type="2" value="0"></od:fieldProperty>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"></od:fieldProperty>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Lot Code GREF"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="5"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="IMP_Lot_Contrat" minOccurs="1" od:jetType="text" od:sqlSType="nvarchar" od:nonNullable="yes">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="IMEMode" type="2" value="0"></od:fieldProperty>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"></od:fieldProperty>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Lot Contrat"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="5"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="IMP_Date_Début" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="IMEMode" type="2" value="0"></od:fieldProperty>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Date Debut"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="IMP_Date_Fin" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="IMEMode" type="2" value="0"></od:fieldProperty>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Date Fin"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="IMP_Nb_Créances" minOccurs="1" od:jetType="longinteger" od:sqlSType="int" od:nonNullable="yes" type="xsd:int">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Nb Creances"></od:fieldProperty>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="IMP_Montant_m1" minOccurs="1" od:jetType="currency" od:sqlSType="money" od:nonNullable="yes" type="xsd:double">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Format" type="10" value="Standard"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Montant En Franc"></od:fieldProperty>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="IMP_Montant_m2" minOccurs="1" od:jetType="currency" od:sqlSType="money" od:nonNullable="yes" type="xsd:double">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
+              <od:fieldProperty name="Format" type="10" value="#,##0.00 €;-#,##0.00 €"></od:fieldProperty>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"></od:fieldProperty>
+              <od:fieldProperty name="Required" type="1" value="1"></od:fieldProperty>
+              <od:fieldProperty name="Description" type="10" value="Importation Montant En Euro"></od:fieldProperty>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"></od:fieldProperty>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
